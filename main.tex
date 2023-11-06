@@ -1,0 +1,76 @@
+% document layout
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{subfiles}
+
+% text tools
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[useregional]{datetime2}
+\usepackage{gensymb}
+
+% headers and footers
+\usepackage{fancyhdr}
+
+% notation extensions
+\usepackage{mathtools}
+\usepackage{siunitx}
+\sisetup{per-mode=fraction}
+\DeclareSIUnit{\calorie}{cal}
+\DeclareSIUnit{\molar}{M}
+\usepackage{mhchem}
+
+% content layout
+\usepackage{float}
+\usepackage{booktabs}
+
+% external imports
+\usepackage{graphicx}
+
+% references
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{res/external.bib}
+
+\begin{document}
+\subfile{parts/cover}
+
+% custon header and footer setup
+\pagestyle{fancy}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{Facultad de Ciencias - UNI}
+\fancyfoot[R]{\thepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+\subfile{parts/introduction}
+
+\section{Objetivos}
+\subfile{parts/objectives}
+
+\section{Fundamentos teóricos}
+\subfile{parts/theory}
+
+\section{Procedimiento experimental}
+\subfile{parts/procedures}
+
+\section{Cálculos}
+\subfile{parts/calculations}
+
+\section{Resultados}
+\subfile{parts/results}
+
+\section{Conclusiones}
+\subfile{parts/conclusions}
+
+\section{Referencias bibliográficas}
+\printbibliography[heading=none]
+
+\clearpage
+
+\listoffigures
+\listoftables
+\end{document}

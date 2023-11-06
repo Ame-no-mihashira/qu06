@@ -1,0 +1,42 @@
+\documentclass[../main]{subfiles}
+
+\begin{document}
+\begin{table}[H]
+  \caption{Método de velocidades iniciales}\label{tab:beginning}
+  \begin{center}
+    \begin{tabular}[c]{lSSS}
+      \toprule
+      &
+      \multicolumn{1}{c}{\textbf{Ensayo 1}} & 
+      \multicolumn{1}{c}{\textbf{Ensayo 2}} & 
+      \multicolumn{1}{c}{\textbf{Ensayo 3}} \\
+      \midrule
+      \ce{[S2O3^{-2}]} & \qty{5e-5}{\molar} & \qty{5e-5}{\molar} & \qty{5e-5}{\molar} \\
+      $v$ de desaparición de \ce{S2O3^{-2}} & \qty{3.24e-6}{\molar\per\s} & \qty{2.80e-6}{\molar\per\s} & \qty{2.84e-6}{\molar\per\s} \\
+      $v$ de aparición de \ce{I2} & \qty{1.62e-6}{\molar\per\s} & \qty{1.40e-6}{\molar\per\s} & \qty{1.42e-6}{\molar\per\s} \\
+      \ce{[I^{-}]} & \qty{0.025}{\molar} & \qty{0.020}{\molar} & \qty{0.020}{\molar} \\
+      \ce{[S2O8^{-2}]} & \qty{0.025}{\molar} & \qty{0.025}{\molar} & \qty{0.015}{\molar} \\
+      Volumen & \qty{10}{\mL} & \qty{10}{\mL} & \qty{10}{\mL} \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+\begin{align*}
+  \frac{v_1}{v_2} &= \frac
+  {k \ce{[I^{-}]}_{1}^{m} \ce{[S2O8^{-2}]}_{1}^{n}}
+  {k \ce{[I^{-}]}_{2}^{m} \ce{[S2O8^{-2}]}_{2}^{n}}\\
+  \frac{\num{1.62e-6}}{\num{1.40e-6}} &= \frac
+  {k \cdot 0.025^{m} \cdot 0.025^{n}}
+  {k \cdot 0.020^{m} \cdot 0.025^{n}}\\
+  \rightarrow m &= 0.63 \approx 1
+\end{align*}
+\begin{align*}
+  \frac{v_2}{v_3} &= \frac
+  {k \ce{[I^{-}]}_{2}^{m} \ce{[S2O8^{-2}]}_{2}^{n}}
+  {k \ce{[I^{-}]}_{3}^{m} \ce{[S2O8^{-2}]}_{3}^{n}}\\
+  \frac{\num{1.62e-6}}{\num{1.40e-6}} &= \frac
+  {k \cdot 0.020^{m} \cdot 0.025^{n}}
+  {k \cdot 0.020^{m} \cdot 0.015^{n}}\\
+  \rightarrow n &= -0.30 \approx 0
+\end{align*}
+\end{document}
